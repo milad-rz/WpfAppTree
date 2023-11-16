@@ -48,6 +48,7 @@ namespace WpfAppTree.ViewModels
             // Dummy data for demonstration purposes
             var root = new TreeNodes { Name = "Root" };
 
+
             var child1 = new TreeNodes { Name = "Child 1" };
             child1.AddChild(new TreeNodes { Name = "Child 1.1" });
             child1.AddChild(new TreeNodes { Name = "Child 1.2" });
