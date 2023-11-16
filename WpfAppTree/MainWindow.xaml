@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfAppTree.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppTree"         
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="799">
+    <Grid>
+        <TreeView ItemsSource="{Binding TreeRoot}" SelectedItemChanged="TreeView_SelectedItemChanged">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <TextBlock Text="{Binding Name}"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <Button Content="Add Child" Command="{Binding AddChildCommand}" Margin="651,216,28,48"/>
+    </Grid>
+</Window>
